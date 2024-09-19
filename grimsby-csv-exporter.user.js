@@ -1,9 +1,12 @@
 // ==UserScript==
 // @name         Grimsby CSV Exporter
 // @namespace    http://tampermonkey.net/
-// @version      2024-06-19
+// @version      2024-09-19
 // @description  Allow export of Grimsby events to csv file. Asana compatible with reminders set ahead of class start dates. Correct date formatting for excel. Split out links to seperate column
 // @author       Leon Anderson <lleoand@amazon.com>
+// @updateURL    https://github.com/leonanderson88/grimsby-csv-exporter/raw/refs/heads/main/grimsby-csv-exporter.user.js
+// @downloadURL  https://github.com/leonanderson88/grimsby-csv-exporter/raw/refs/heads/main/grimsby-csv-exporter.user.js
+// @match        https://grimsby.bots.aws.a2z.com/*
 // @match        https://grimsby.bots.aws.a2z.com/activities
 // @exclude      https://grimsby.bots.aws.a2z.com/activities/*
 // @icon         data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAhJJREFUOBGVU01oE0EYfbOzaRuazQ+CjQf/aFGhIBWLGJRaPFgQC1WkWPDgxUMO1YPgpSBFeooeCop4yEUJCi3FQw6CnoTU9qCH2nooapBWsSpkSZpNGpud8dtJdqWRFDqw88333vvezDe7C2wzJjO/D4/cTx/ZRgKtGflw1uzjXP/IYC9dvfeiv5muqYFg6KIiDgkuwDt3bBANhVMS+EDPktmqp3ZsMNzN/kDKNQasvbxxvtLMgHjg3c/KHQrxRpEtEHn7ucB0XTcbOcofj8Yi43qNkAbAoo0iTjdExQ7c0chRa1RDl/RgLjcWaOP9fp+2zwG+ZL9iZfU7oh27nRTfzE0Vl99nsGEVENxVw/NmTkR7zu6hPdhEuSJOKxVN0zNpPE1NoVq1XQh2dRPpZAKvnj3ysHLJOkX9T9Rb8HBcGR5CsWjR0bkHct2Hi/Ex+AMhD3MX/xkc2L8XthAorBeVxsrnVTzY3QuN/zP1DATYdbqDywQMuGDJKmH8bgJCSqwszIIxDfHEE7QHI64E7QHjNdFT2s1YOBlsY4seQwvDCGDwwoBqg9NbOHPp2pZiR2uEwovPbw8l3RZ+ELbgEM6whfSfOBk7dOx4L+aXf8HX0goh7E9c4+WagmYpnBqoD8kD64vJ+dxRLpkynMu8Uaim8Z7UrUFvE7fGPYGbq+gzIlm5nj+nElb7Y1uqIrtFVE/+AopfnHn0oCa4AAAAAElFTkSuQmCC
