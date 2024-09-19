@@ -14,6 +14,8 @@
 // ==/UserScript==
 
 // For distribution
+// https://github.com/leonanderson88/grimsby-csv-exporter/raw/refs/heads/main/grimsby-csv-exporter.user.js
+// OLD DISTRO
 // https://drive.corp.amazon.com/documents/lleoand@/greasemonkey_scripts/grimsby-csv-exporter.user.js
 
 (function () {
