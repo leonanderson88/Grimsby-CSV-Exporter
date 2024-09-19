@@ -114,7 +114,21 @@
         return newDateFormat;
     }
 
-    function convertToCSV(arrayData){
+    function zeroPad(num, places) {
+        return String(num).padStart(places, "0");
+    }
+
+    function formatDateforFileName(inputDate) {
+        return `${inputDate.getFullYear()}_${zeroPad(
+            inputDate.getMonth() + 1,
+            2
+        )}_${zeroPad(inputDate.getDate(), 2)}_${zeroPad(
+            inputDate.getHours(),
+            2
+        )}_${zeroPad(inputDate.getMinutes(), 2)}`;
+    }
+
+    function convertToCSV(arrayData) {
         let csvContent = "";
 
         //console.log("ARRAY DATA:", arrayData);
@@ -137,9 +151,12 @@
 
         let element = document.createElement('a');
 
-        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(csvData));
-        element.setAttribute('download', 'classes.csv');
-        element.style.display = 'none';
+        element.setAttribute(
+            "href",
+            "data:text/plain;charset=utf-8," + encodeURIComponent(csvData)
+        );
+        element.setAttribute("download", `classes_${formatDateforFileName(new Date())}.csv`);
+        element.style.display = "none";
 
         if (typeof element.download != "undefined") {
             //browser has support - process the download
